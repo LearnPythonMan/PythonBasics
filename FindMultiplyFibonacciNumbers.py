@@ -1,10 +1,25 @@
+test = 5895
+
 def productFib(prod):
-    n = int(round(math.sqrt(prod * 2 / (sqrt(5) + 1), 0))
-    m = float(math.sqrt(5 * n * n + 4))
-    o = float(math.sqrt(5 * n * n - 4))
-    if pow(int(m), 2) == m or pow(int(n), 2) == n:
-        return [n, round(n * ((sqrt(5) + 1) / 2)), True]
-    # else:
+    a = b = 1
+    while prod > a*b:
+        a, b = b, a+b
+    if prod == a*b:
+        return [a, b, True]
+    else:
+        return [a, b, False]
+
+
+
+print(productFib(test))
+
+#     n = int(round(math.sqrt(prod * 2 / (math.sqrt(5) + 1)), 0))
+#     m = float(math.sqrt(5 * n * n + 4))
+#     o = float(math.sqrt(5 * n * n - 4))
+#     if int(m) == m or int(o) == o:
+#         return [n, round(n * ((math.sqrt(5) + 1) / 2)), True]
+#     else:
+#         return False
 
 # The Fibonacci numbers are the numbers in the following integer sequence (Fn):
 #
@@ -26,4 +41,4 @@ def productFib(prod):
 # If you don't find two consecutive F(m) verifying F(m) * F(m+1) = prodyou will return
 #
 # [F(m), F(m+1), false] or {F(n), F(n+1), 0} or (F(n), F(n+1), False)
-# F(m) being the smallest one such as F(m) * F(m+1) > prod.
+# F(m) being the smallest one such as F(m) * F(m+1) > prod.git push
