@@ -24,3 +24,14 @@ print(diamond(5))
 #
 # Python Note
 # Since print is a reserved word in Python, Python students must implement the diamond(n) method instead, and return None for invalid input.
+
+# def diamond(n):
+#     if n > 0 and n % 2 == 1:
+#         diamond = ""
+#         for i in range(n):
+#             diamond += " " * abs((n/2) - i)
+#             diamond += "*" * (n - abs((n-1) - 2 * i))
+#             diamond += "\n"
+#         return diamond
+#     else:
+#         return None
